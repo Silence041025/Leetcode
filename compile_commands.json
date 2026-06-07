@@ -1,0 +1,7 @@
+[
+    {
+        "directory": "D:/Leetcode",
+        "command": "g++ -c -IC:/msys64/mingw64/include/c++/15.2.0 -IC:/msys64/mingw64/include/c++/15.2.0/mingw64 -IC:/msys64/mingw64/lib/gcc/mingw32/15.2.0/include -IC:/msys64/mingw64/include D:/Leetcode/temp.cpp",
+        "file": "D:/Leetcode/test.cpp"
+    }
+]

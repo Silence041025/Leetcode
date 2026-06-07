@@ -1,0 +1,13 @@
+{
+    "c++": {
+        "compiler": "C:\\msys64\\mingw64\\bin\\g++.exe",
+        "includePath": [
+            "C:\\msys64\\mingw64\\include",
+            "C:\\msys64\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\15.2.0\\include",
+            "C:\\msys64\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\15.2.0\\include\\c++",
+            "C:\\msys64\\mingw64\\x86_64-w64-mingw32\\include"
+        ],
+        "cStandard": "c17",
+        "cppStandard": "c++17"
+    }
+}

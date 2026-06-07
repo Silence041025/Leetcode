@@ -1,0 +1,23 @@
+#include "vector"
+#include "iostream"
+#include "algorithm"
+#include "string"
+#include "numeric"
+#include "deque"
+#include "queue"
+#include "stack"
+#include "unordered_set"
+#include "set"
+#include "unordered_map"
+#include "map"
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    if(n>=10){
+        cout<<"yes";
+    }
+    else{
+        cout<<"no";
+    }
+}

@@ -1,0 +1,58 @@
+{
+    "configurations": [
+        {
+            "type": "command",
+            "name": "Build Single File",
+            "program": "g++",
+            "args": ["$FILE$", "-o", "$FILE_DIR$/$FILE_NAME_NO_EXT$.exe"]
+        },
+        {
+            "type": "command",
+            "name": "Run Single File",
+            "program": "$FILE_DIR$/$FILE_NAME_NO_EXT$.exe"
+        },
+        {
+            "type": "command",
+            "name": "Build & Run Single File",
+            "program": "$FILE_DIR$/$FILE_NAME_NO_EXT$.exe",
+            "dependsOn": ["Build Single File"]
+        },
+        {
+            "type": "command",
+            "name": "CMake Configure",
+            "program": "cmake",
+            "args": [
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "-G",
+                "MinGW Makefiles",
+                "-S",
+                "$FILE_DIR$",
+                "-B",
+                "$FILE_DIR$/cmake-build-debug"
+            ]
+        },
+        {
+            "type": "command",
+            "name": "CMake Build",
+            "program": "mingw32-make",
+            "args": ["-C", "$FILE_DIR$/cmake-build-debug"]
+        },
+        {
+            "type": "command",
+            "name": "CMake Run",
+            "program": "$FILE_DIR$/cmake-build-debug/$FILE_NAME_NO_EXT$.exe"
+        },
+        {
+            "type": "command",
+            "name": "CMake Full Build & Run",
+            "program": "$FILE_DIR$/cmake-build-debug/$FILE_NAME_NO_EXT$.exe",
+            "dependsOn": ["CMake Configure", "CMake Build"]
+        },
+        {
+            "type": "jps-run",
+            "name": "Java: Run Current File",
+            "mainClass": "$FILE_NAME_NO_EXT$",
+            "module": ""
+        }
+    ]
+}
