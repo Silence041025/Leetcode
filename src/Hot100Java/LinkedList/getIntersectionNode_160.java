@@ -1,0 +1,26 @@
+package Hot100Java.LinkedList;
+
+import java.util.HashSet;
+
+public class getIntersectionNode_160 {
+
+    public class Solution {
+        public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+            HashSet<ListNode> hashSet = new HashSet<>();
+            while(headA!=null){
+                hashSet.add(headA);
+                headA = headA.next;
+            }
+
+            while (headB!=null){
+                if(hashSet.contains(headB)){
+                    return headB;
+                }
+                headB = headB.next;
+            }
+
+            return null;
+        }
+    }
+
+}
